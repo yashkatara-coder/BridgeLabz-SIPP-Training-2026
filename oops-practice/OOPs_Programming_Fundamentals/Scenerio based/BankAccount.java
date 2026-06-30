@@ -90,4 +90,3 @@ public class BankAccount {
         System.out.println("Total accounts created: " + BankAccount.getTotalAccountsCreated());
     }
 }
-
