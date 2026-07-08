@@ -1,10 +1,9 @@
-import java.util.Arrays;
+public class FirstLastOccurrence {
 
-public class FirstAndLastOccurrence {
+    static int firstOccurrence(int[] arr, int target) {
 
-    static int first(int[] arr, int target) {
-
-        int left = 0, right = arr.length - 1;
+        int left = 0;
+        int right = arr.length - 1;
         int ans = -1;
 
         while (left <= right) {
@@ -24,9 +23,10 @@ public class FirstAndLastOccurrence {
         return ans;
     }
 
-    static int last(int[] arr, int target) {
+    static int lastOccurrence(int[] arr, int target) {
 
-        int left = 0, right = arr.length - 1;
+        int left = 0;
+        int right = arr.length - 1;
         int ans = -1;
 
         while (left <= right) {
@@ -48,8 +48,11 @@ public class FirstAndLastOccurrence {
 
     public static void main(String[] args) {
 
-        int[] arr = {5,7,7,8,8,10};
+        int[] arr = {2,4,4,4,6,8,10};
 
-        System.out.println(Arrays.toString(new int[]{first(arr,8), last(arr,8)}));
+        int target = 4;
+
+        System.out.println("First Occurrence : " + firstOccurrence(arr, target));
+        System.out.println("Last Occurrence : " + lastOccurrence(arr, target));
     }
 }
